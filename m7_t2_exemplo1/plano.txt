@@ -1,0 +1,49 @@
+﻿//Gerir notas de alunos
+//-----------------------
+Tabelas:
+	Alunos(nprocesso,nome,morada,cp,data_nascimento)
+	Disciplinas(id,nome,nr_modulos)
+	Notas(id,id_disciplina,nprocesso,valor,data,nrmodulo)
+	Utilizadores(nome,palavra_passe,perfil,nprocesso)
+
+Páginas:
+	Públicas
+		index - login
+	Perfil administrador
+		Gerir alunos - CRUD
+		Gerir disciplinas - CRUD
+		Gerir Notas - CRUD
+		Gerir utilizadores - CRUD
+	Perfil aluno
+		Perfil do aluno - RU
+		Notas - R
+
+Scripts BD
+create table alunos(
+	nprocesso int primary key identity,
+	nome varchar(60) not null,
+	morada varchar(100) not null,
+	cp varchar(8) not null,
+	data_nascimento date not null
+);
+create table disciplinas(
+	id int primary key identity,
+	nome varchar(60) not null,
+	nr_modulos int not null,
+);
+
+create table notas(
+	id int primary key identity,
+	id_disciplinas int not null foreign key references disciplinas(id),
+	nprocesso int not null foreign key references alunos(nprocesso),
+	valor int check(valor>=1 and valor<=20),
+	data date not null,
+	nrmodulo int not null
+);
+
+create table Utilizadores(
+	nome varchar(20) not null,
+	palavra_passe varchar(50) not null,
+	perfil int not null,
+	nprocesso int foreign key references alunos(nprocesso) null
+);
