@@ -66,7 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\site.css" />
     <Content Include="gerir_alunos_admin.aspx" />
+    <Content Include="gerir_disciplinas_admin.aspx" />
     <Content Include="packages.config" />
     <Content Include="masterpage.Master" />
     <Content Include="css\bootstrap-theme.css.map" />
@@ -106,6 +108,13 @@
     </Compile>
     <Compile Include="gerir_alunos_admin.aspx.designer.cs">
       <DependentUpon>gerir_alunos_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gerir_disciplinas_admin.aspx.cs">
+      <DependentUpon>gerir_disciplinas_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gerir_disciplinas_admin.aspx.designer.cs">
+      <DependentUpon>gerir_disciplinas_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
