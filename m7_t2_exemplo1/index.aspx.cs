@@ -11,7 +11,26 @@ namespace m7_t2_exemplo1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //esconder a div_login se já login
+            if (Session["nome"] != null)
+                div_login.Visible = false;
 
+            if (IsPostBack)
+                Label1.Text = "Login falhou. Tente novamente";
+        }
+
+        protected void DetailsView1_DataBound(object sender, EventArgs e)
+        {
+            //detailsview com dados?
+            if (DetailsView1.Rows.Count > 0)
+            {
+                //guardar dados da sessão
+                Session["nome"] = DetailsView1.Rows[0].Cells[1].Text;
+                Session["perfil"] = DetailsView1.Rows[1].Cells[1].Text;
+                Session["nprocesso"] = DetailsView1.Rows[2].Cells[1].Text;
+                //esconder div login
+                div_login.Visible = false;
+            }
         }
     }
 }

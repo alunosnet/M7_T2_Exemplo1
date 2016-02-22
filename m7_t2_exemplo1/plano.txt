@@ -5,7 +5,9 @@ Tabelas:
 	Disciplinas(id,nome,nr_modulos)
 	Notas(id,id_disciplina,nprocesso,valor,data,nrmodulo)
 	Utilizadores(nome,palavra_passe,perfil,nprocesso)
-
+	Perfil:
+		0 - Administrador
+		1 - Aluno
 Páginas:
 	Públicas
 		index - login

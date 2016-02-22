@@ -1,4 +1,4 @@
-﻿<div<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="m7_t2_exemplo1.masterpage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="m7_t2_exemplo1.masterpage" %>
 
 <!DOCTYPE html>
 
@@ -31,6 +31,10 @@
                         <li><a href="gerir_alunos_admin.aspx">Gerir Alunos</a></li>
                         <li><a href="gerir_disciplinas_admin.aspx">Gerir Disciplinas</a></li>
                         <li><a href="gerir_notas_admin.aspx">Gerir Notas</a></li>
+                        <li><a href="gerir_utilizadores_admin.aspx">Gerir Utilizadores</a></li>
+                        <%if (Session["nome"] != null) {  %>
+                        <li><a href="logout.aspx">Logout</a></li>
+                        <%} %>
                     </ul>
                 </div>
             </div>
