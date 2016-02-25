@@ -11,7 +11,10 @@ namespace m7_t2_exemplo1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //verificar se tem login e se é administrador
+            if (Session["perfil"] == null ||
+                Session["perfil"].Equals("1"))
+                Response.Redirect("index.aspx");
         }
     }
 }

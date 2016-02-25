@@ -72,6 +72,7 @@
     <Content Include="gerir_notas_admin.aspx" />
     <Content Include="gerir_utilizadores_admin.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="notas_aluno.aspx" />
     <Content Include="packages.config" />
     <Content Include="masterpage.Master" />
     <Content Include="css\bootstrap-theme.css.map" />
@@ -100,6 +101,7 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-1.11.3.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="perfil_aluno.aspx" />
     <Content Include="plano.txt" />
     <Content Include="sobre.aspx" />
     <Content Include="Web.config" />
@@ -153,6 +155,20 @@
     </Compile>
     <Compile Include="masterpage.Master.designer.cs">
       <DependentUpon>masterpage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="notas_aluno.aspx.cs">
+      <DependentUpon>notas_aluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notas_aluno.aspx.designer.cs">
+      <DependentUpon>notas_aluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfil_aluno.aspx.cs">
+      <DependentUpon>perfil_aluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfil_aluno.aspx.designer.cs">
+      <DependentUpon>perfil_aluno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sobre.aspx.cs">

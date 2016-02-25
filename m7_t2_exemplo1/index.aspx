@@ -3,7 +3,7 @@
     <title>Página inicial</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<h1>Página inicial</h1>
+    <h1>Página inicial</h1>
     <div runat="server" id="div_login">
     <!--Login-->
     <!--Nome utilizador-->
